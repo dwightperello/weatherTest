@@ -57,7 +57,7 @@ class weaterhDaoTest {
 
         )
         dao.InsertWeather(wet)
-        val userinfo = dao.getAllWeather().getOrAwaitValue()
+        val userinfo = dao.getAllWeather()
         assertThat(userinfo).contains(wet)
     }
 

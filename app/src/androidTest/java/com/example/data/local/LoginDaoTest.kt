@@ -53,7 +53,7 @@ class LoginDaoTest {
             Address = "test address"
         )
         dao.insertUser(user)
-        val userinfo = dao.Login("test@test.com","pass12345").getOrAwaitValue()
+        val userinfo = dao.Login("test@test.com","pass12345")
         assertThat(userinfo.Id).isEqualTo(user.Id)
         assertThat(userinfo.Email).isEqualTo(user.Email)
         assertThat(userinfo.Name).isEqualTo(user.Name)

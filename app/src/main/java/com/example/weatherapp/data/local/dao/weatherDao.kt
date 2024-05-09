@@ -13,5 +13,5 @@ interface weatherDao {
     suspend fun InsertWeather(weather: weather)
 
     @Query("SELECT * FROM weather")
-    fun getAllWeather():LiveData<List<weather>>
+    suspend fun getAllWeather():List<weather>
 }

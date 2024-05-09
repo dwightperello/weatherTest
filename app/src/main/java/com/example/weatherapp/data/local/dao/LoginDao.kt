@@ -10,11 +10,8 @@ import com.example.weatherapp.data.local.model.User
 @Dao
 interface LoginDao {
 
-//    @Query("SELECT * FROM User WHERE Email = :email and Password = :password")
-//    suspend fun Login(email:String,password:String): User
-
     @Query("SELECT * FROM User WHERE Email = :email and Password = :password")
-    fun Login(email:String,password:String): LiveData<User>
+   suspend fun Login(email:String,password:String): User
 
     @Insert
     suspend fun insertUser(user: User)

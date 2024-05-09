@@ -1,6 +1,6 @@
-package com.example.weatherapp.domain.repository
+package com.example.weatherapp.domain.repository.remote
 
-import com.example.weatherapp.data.remote.response.WeatherResponse
+import com.example.weatherapp.data.remote.model.response.WeatherResponse
 import kotlinx.coroutines.flow.Flow
 import retrofit2.http.Query
 
